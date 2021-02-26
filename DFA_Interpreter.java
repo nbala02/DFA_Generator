@@ -16,13 +16,18 @@ public class DFA_Interpreter {
     	Scanner tableFile = new Scanner(System.in);
     	Scanner stringFile = new Scanner(System.in);
     	
-    	System.out.println("Enter the transition table file path: "); // /Users/nehabala/Desktop/transition_table.txt
+        // Enter the transition table file path 
+    	System.out.println("Enter the transition table file path: ");
     	String tablePath = tableFile.next();
     	
-    	System.out.println("Enter the string file path: "); // /Users/nehabala/Desktop/valid_string.txt
+        // Enter the input string file path
+    	System.out.println("Enter the input string file path: ");
     	String stringPath = stringFile.next();
     	
+        // Create an instance of the Interpreter class
     	Interpreter interpreter = new Interpreter();
+        
+        // Call the methods of the Interpreter class
     	interpreter.transitionTable(tablePath);
     	interpreter.stringInput(stringPath);
     	interpreter.dfaInterpreter();
